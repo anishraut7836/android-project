@@ -10,5 +10,14 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('list-directory') {
+            steps {
+                sh '''
+                ls -l
+                cat test-file1
+
+                '''
+            }
+        }
     }
 }
